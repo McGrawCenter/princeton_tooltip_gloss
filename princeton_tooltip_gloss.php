@@ -39,4 +39,4 @@ class PUTooltipGloss {
 
 }
 
-add_action('plugins_loaded', array('PUTooltipGloss', 'get_instance'), 200);
+new PUTooltipGloss();
