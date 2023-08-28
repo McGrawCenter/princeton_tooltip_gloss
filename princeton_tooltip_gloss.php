@@ -32,7 +32,8 @@ class PUTooltipGloss {
       if(substr($message,0,4)=="http") { $message = "<img src='{$message}' height='180'/>"; }
 
       $content = strip_tags(trim($content));
-      $content = preg_replace( "/{$content}/i" , "<a href='#' class='glossary'>{$content}</a><span class='popup' >{$message}</span>", $content);
+      //$content = preg_replace( "/{$content}/i" , "<a href='#' class='glossary'>{$content}</a><span class='popup' >{$message}</span>", $content);
+      $content = str_replace( $content , "<a href='#' class='glossary'>{$content}</a><span class='popup' >{$message}</span>", $content);
       return $content;
    }
 
